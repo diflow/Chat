@@ -35,6 +35,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        googleButton.customizeGoogleButton()
         view.backgroundColor = .white
         
         setupConstraints()
@@ -89,6 +90,7 @@ extension LoginViewController {
             bottomStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             bottomStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40)
         ])
+        
     }
 }
 
