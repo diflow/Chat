@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C3234A525C1815800730E77 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3234A425C1815800730E77 /* LoginViewController.swift */; };
 		2C5E88A425C078E600FCAE78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5E88A325C078E600FCAE78 /* AppDelegate.swift */; };
 		2C5E88A625C078E600FCAE78 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5E88A525C078E600FCAE78 /* SceneDelegate.swift */; };
 		2C5E88A825C078E600FCAE78 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5E88A725C078E600FCAE78 /* AuthViewController.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C3234A425C1815800730E77 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2C5E88A025C078E600FCAE78 /* Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C5E88A325C078E600FCAE78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C5E88A525C078E600FCAE78 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				2C5E88A525C078E600FCAE78 /* SceneDelegate.swift */,
 				2C5E88A725C078E600FCAE78 /* AuthViewController.swift */,
 				2C5E88D725C0B67800FCAE78 /* SignUpViewController.swift */,
+				2C3234A425C1815800730E77 /* LoginViewController.swift */,
 				2C5E88CE25C0A09E00FCAE78 /* ButtonFormView.swift */,
 				2C5E88DA25C0B98900FCAE78 /* OneLineTextField.swift */,
 				2C5E88CC25C09F4100FCAE78 /* Extensions */,
@@ -187,6 +190,7 @@
 				2C5E88C125C09AB400FCAE78 /* UIColor + Extension.swift in Sources */,
 				2C5E88A625C078E600FCAE78 /* SceneDelegate.swift in Sources */,
 				2C5E88BB25C0873C00FCAE78 /* UIButton + Extension.swift in Sources */,
+				2C3234A525C1815800730E77 /* LoginViewController.swift in Sources */,
 				2C5E88D225C0A5A700FCAE78 /* UIStackView + Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
