@@ -9,6 +9,8 @@ import UIKit
 
 class PeopleViewController: UIViewController {
     
+    
+    
     let users = Bundle.main.decode([MUser].self, from: "people.json")
     var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<Section, MUser>!
