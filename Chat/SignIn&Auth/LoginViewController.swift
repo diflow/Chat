@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol AuthNavigationDelegate: class {
+    func toLoginVC()
+    func toSignUpVC()
+}
+
 class LoginViewController: UIViewController {
     
     let welcomeLabel = UILabel(text: "Welcome back", font: .avenir26())
@@ -31,6 +36,8 @@ class LoginViewController: UIViewController {
         return button
     }()
     
+    weak var delegate: AuthNavigationDelegate?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,9 +46,44 @@ class LoginViewController: UIViewController {
         view.backgroundColor = .white
         
         setupConstraints()
+        
+        googleButton.addTarget(self, action: #selector(googleButtonTapped), for: .touchUpInside)
+        loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+        signInButton.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
     }
     
+    func textFieldShouldReturn(_ textField: OneLineTextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
     
+    @objc func googleButtonTapped() {
+        print(#function)
+    }
+    
+    @objc func loginButtonTapped() {
+        print(#function)
+        AuthService.shared.login(email: emailTextField.text, password: passwordTextField.text) { (result) in
+            switch result {
+            
+            case .success(let user):
+                self.showAlert(with: "Успешно!", and: "Вы авторизованы") {
+                    self.present(MainTabBarController(), animated: true, completion: nil)
+                }
+                print(user.email)
+            case .failure(let error):
+                self.showAlert(with: "Ошибка!", and: error.localizedDescription)
+            }
+        }
+    }
+    
+    @objc func signInButtonTapped() {
+        print(#function)
+        dismiss(animated: true) {
+            self.delegate?.toSignUpVC()
+        }
+        //present(SignUpViewController(), animated: true, completion: nil)
+    }
 }
 
 extension LoginViewController {
@@ -86,7 +128,7 @@ extension LoginViewController {
         ])
         
         NSLayoutConstraint.activate([
-            bottomStackView.bottomAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 80),
+            bottomStackView.bottomAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 20),
             bottomStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             bottomStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40)
         ])

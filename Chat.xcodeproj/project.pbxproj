@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -42,10 +42,13 @@
 		2C6CF46225C2112E0032BC48 /* ActiveChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6CF46125C2112E0032BC48 /* ActiveChatCell.swift */; };
 		2C6CF46625C2261C0032BC48 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6CF46525C2261C0032BC48 /* GradientView.swift */; };
 		2CA8F64725C1A2EB00331B3D /* SegmentedControl + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA8F64625C1A2EB00331B3D /* SegmentedControl + Extension.swift */; };
+		2CAA7DC225C7F2A300CF0DF8 /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAA7DC125C7F2A300CF0DF8 /* Validators.swift */; };
+		2CAA7DC525C7F4EA00CF0DF8 /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAA7DC425C7F4EA00CF0DF8 /* AuthError.swift */; };
 		2CAAC8BE25C2D8C4005A5F14 /* MUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAAC8BD25C2D8C4005A5F14 /* MUser.swift */; };
 		2CAAC8C125C2D8EA005A5F14 /* MChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAAC8C025C2D8EA005A5F14 /* MChat.swift */; };
 		2CD9EF2C25C7387300E7F341 /* ChatRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9EF2B25C7387300E7F341 /* ChatRequestViewController.swift */; };
 		2CD9EF3025C7462400E7F341 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CD9EF2F25C7462400E7F341 /* GoogleService-Info.plist */; };
+		2CD9EF4325C7524C00E7F341 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD9EF4225C7524C00E7F341 /* AuthService.swift */; };
 		C2D8CAD29F8FBAD97416420F /* Pods_Chat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9408021E6E9C263A42044232 /* Pods_Chat.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,10 +90,13 @@
 		2C6CF46125C2112E0032BC48 /* ActiveChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveChatCell.swift; sourceTree = "<group>"; };
 		2C6CF46525C2261C0032BC48 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		2CA8F64625C1A2EB00331B3D /* SegmentedControl + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SegmentedControl + Extension.swift"; sourceTree = "<group>"; };
+		2CAA7DC125C7F2A300CF0DF8 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
+		2CAA7DC425C7F4EA00CF0DF8 /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
 		2CAAC8BD25C2D8C4005A5F14 /* MUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUser.swift; sourceTree = "<group>"; };
 		2CAAC8C025C2D8EA005A5F14 /* MChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MChat.swift; sourceTree = "<group>"; };
 		2CD9EF2B25C7387300E7F341 /* ChatRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRequestViewController.swift; sourceTree = "<group>"; };
 		2CD9EF2F25C7462400E7F341 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2CD9EF4225C7524C00E7F341 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		3ECDD829DB0F5E383B1D754D /* Pods-Chat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat.release.xcconfig"; path = "Target Support Files/Pods-Chat/Pods-Chat.release.xcconfig"; sourceTree = "<group>"; };
 		9408021E6E9C263A42044232 /* Pods_Chat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0D466733F5B4095B00572C2 /* Pods-Chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat.debug.xcconfig"; path = "Target Support Files/Pods-Chat/Pods-Chat.debug.xcconfig"; sourceTree = "<group>"; };
@@ -171,11 +177,12 @@
 			children = (
 				2C5E88A325C078E600FCAE78 /* AppDelegate.swift */,
 				2C5E88A525C078E600FCAE78 /* SceneDelegate.swift */,
-				2C3DA61B25C4046300CC79E9 /* Model */,
+				2CD9EF4125C7520C00E7F341 /* Services */,
 				2C464CAB25C1CE9300EA6EA2 /* Controllers */,
 				2C464CA925C1CE6E00EA6EA2 /* SignIn&Auth */,
 				2C5FD84225C2A1F600431261 /* Protocols */,
 				2C5E88CC25C09F4100FCAE78 /* Extensions */,
+				2CAA7DC725C7F7CF00CF0DF8 /* Helpers */,
 				2C6CF45725C207BE0032BC48 /* activeChats.json */,
 				2C6CF45A25C207EE0032BC48 /* waitingChats.json */,
 				2C3DA61D25C4053400CC79E9 /* people.json */,
@@ -237,13 +244,30 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		2CAA7DC725C7F7CF00CF0DF8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2CAA7DC125C7F2A300CF0DF8 /* Validators.swift */,
+				2CAA7DC425C7F4EA00CF0DF8 /* AuthError.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		2CD9EF4125C7520C00E7F341 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2C3DA61B25C4046300CC79E9 /* Model */,
+				2CD9EF4225C7524C00E7F341 /* AuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		D225536E35545CA96E531226 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				B0D466733F5B4095B00572C2 /* Pods-Chat.debug.xcconfig */,
 				3ECDD829DB0F5E383B1D754D /* Pods-Chat.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -378,8 +402,10 @@
 				2C4FD7FF25C2A56D00859014 /* SectionHeader.swift in Sources */,
 				2C6CF46625C2261C0032BC48 /* GradientView.swift in Sources */,
 				2C464CAE25C1CEC000EA6EA2 /* MainTabBarController.swift in Sources */,
+				2CAA7DC525C7F4EA00CF0DF8 /* AuthError.swift in Sources */,
 				2C5E88D825C0B67800FCAE78 /* SignUpViewController.swift in Sources */,
 				2CAAC8BE25C2D8C4005A5F14 /* MUser.swift in Sources */,
+				2CAA7DC225C7F2A300CF0DF8 /* Validators.swift in Sources */,
 				2C6CF46225C2112E0032BC48 /* ActiveChatCell.swift in Sources */,
 				2C5E88BE25C098A500FCAE78 /* UIFont + Extension.swift in Sources */,
 				2C6699C925C6CBF400354481 /* InsertableTextField.swift in Sources */,
@@ -403,6 +429,7 @@
 				2C5E88A625C078E600FCAE78 /* SceneDelegate.swift in Sources */,
 				2C5E88BB25C0873C00FCAE78 /* UIButton + Extension.swift in Sources */,
 				2C3234A525C1815800730E77 /* LoginViewController.swift in Sources */,
+				2CD9EF4325C7524C00E7F341 /* AuthService.swift in Sources */,
 				2C5E88D225C0A5A700FCAE78 /* UIStackView + Extension.swift in Sources */,
 				2CD9EF2C25C7387300E7F341 /* ChatRequestViewController.swift in Sources */,
 			);
