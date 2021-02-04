@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C01241025CBF00D00037496 /* AuthNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C01240F25CBF00D00037496 /* AuthNavigationDelegate.swift */; };
+		2C01241325CC076F00037496 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C01241225CC076F00037496 /* FirestoreService.swift */; };
 		2C3234A525C1815800730E77 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3234A425C1815800730E77 /* LoginViewController.swift */; };
 		2C3234A925C1947400730E77 /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3234A825C1947400730E77 /* SetupProfileViewController.swift */; };
 		2C3234AC25C1970C00730E77 /* AddPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3234AB25C1970C00730E77 /* AddPhotoView.swift */; };
@@ -41,6 +43,7 @@
 		2C6CF45E25C208190032BC48 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6CF45D25C208190032BC48 /* Bundle-Decodable.swift */; };
 		2C6CF46225C2112E0032BC48 /* ActiveChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6CF46125C2112E0032BC48 /* ActiveChatCell.swift */; };
 		2C6CF46625C2261C0032BC48 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6CF46525C2261C0032BC48 /* GradientView.swift */; };
+		2C9AEABC25CC156C00618966 /* UserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9AEABB25CC156C00618966 /* UserError.swift */; };
 		2CA8F64725C1A2EB00331B3D /* SegmentedControl + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA8F64625C1A2EB00331B3D /* SegmentedControl + Extension.swift */; };
 		2CAA7DC225C7F2A300CF0DF8 /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAA7DC125C7F2A300CF0DF8 /* Validators.swift */; };
 		2CAA7DC525C7F4EA00CF0DF8 /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAA7DC425C7F4EA00CF0DF8 /* AuthError.swift */; };
@@ -53,6 +56,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C01240F25CBF00D00037496 /* AuthNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNavigationDelegate.swift; sourceTree = "<group>"; };
+		2C01241225CC076F00037496 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		2C3234A425C1815800730E77 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2C3234A825C1947400730E77 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
 		2C3234AB25C1970C00730E77 /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
@@ -89,6 +94,7 @@
 		2C6CF45D25C208190032BC48 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		2C6CF46125C2112E0032BC48 /* ActiveChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveChatCell.swift; sourceTree = "<group>"; };
 		2C6CF46525C2261C0032BC48 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		2C9AEABB25CC156C00618966 /* UserError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserError.swift; sourceTree = "<group>"; };
 		2CA8F64625C1A2EB00331B3D /* SegmentedControl + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SegmentedControl + Extension.swift"; sourceTree = "<group>"; };
 		2CAA7DC125C7F2A300CF0DF8 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
 		2CAA7DC425C7F4EA00CF0DF8 /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
@@ -228,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				2C5FD83F25C2A1D700431261 /* SelfConfiguringCell.swift */,
+				2C01240F25CBF00D00037496 /* AuthNavigationDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -249,6 +256,7 @@
 			children = (
 				2CAA7DC125C7F2A300CF0DF8 /* Validators.swift */,
 				2CAA7DC425C7F4EA00CF0DF8 /* AuthError.swift */,
+				2C9AEABB25CC156C00618966 /* UserError.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -258,6 +266,7 @@
 			children = (
 				2C3DA61B25C4046300CC79E9 /* Model */,
 				2CD9EF4225C7524C00E7F341 /* AuthService.swift */,
+				2C01241225CC076F00037496 /* FirestoreService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -408,8 +417,10 @@
 				2CAA7DC225C7F2A300CF0DF8 /* Validators.swift in Sources */,
 				2C6CF46225C2112E0032BC48 /* ActiveChatCell.swift in Sources */,
 				2C5E88BE25C098A500FCAE78 /* UIFont + Extension.swift in Sources */,
+				2C01241025CBF00D00037496 /* AuthNavigationDelegate.swift in Sources */,
 				2C6699C925C6CBF400354481 /* InsertableTextField.swift in Sources */,
 				2C464CB125C1CF1200EA6EA2 /* PeopleViewController.swift in Sources */,
+				2C01241325CC076F00037496 /* FirestoreService.swift in Sources */,
 				2C5E88A825C078E600FCAE78 /* AuthViewController.swift in Sources */,
 				2C6699C625C6A29C00354481 /* ProfileViewController.swift in Sources */,
 				2C6CF45E25C208190032BC48 /* Bundle-Decodable.swift in Sources */,
@@ -417,6 +428,7 @@
 				2C5E88C425C09CF300FCAE78 /* UILabel + Extension.swift in Sources */,
 				2C5E88CF25C0A09E00FCAE78 /* ButtonFormView.swift in Sources */,
 				2C3234AC25C1970C00730E77 /* AddPhotoView.swift in Sources */,
+				2C9AEABC25CC156C00618966 /* UserError.swift in Sources */,
 				2C5E88A425C078E600FCAE78 /* AppDelegate.swift in Sources */,
 				2C6699CC25C6D12A00354481 /* UIView + Extension.swift in Sources */,
 				2C5E88C725C09DF000FCAE78 /* UIImageView + Extension.swift in Sources */,
